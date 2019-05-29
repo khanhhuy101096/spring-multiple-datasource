@@ -26,7 +26,7 @@ import java.util.function.Supplier;
 @SpringBootApplication
 public class Application {
 
-    private static final Logger log = LoggerFactory.getLogger(Application.class);
+    /*private static final Logger log = LoggerFactory.getLogger(Application.class);*/
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
@@ -45,7 +45,7 @@ public class Application {
         log.info(quote.toString());
     }*/
 
-    @Bean
+    /*@Bean
     public RestTemplate restTemplate(RestTemplateBuilder builder) {
         SimpleClientHttpRequestFactory clientHttpReq = new SimpleClientHttpRequestFactory();
         Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("192.168.100.12", 8080));
@@ -54,7 +54,7 @@ public class Application {
         RestTemplate restTemplate = builder.build();
         restTemplate.setRequestFactory(clientHttpReq);
         return restTemplate;
-        /*return builder.build();*/
+        return builder.build();
     }
 
     @Bean
@@ -64,6 +64,6 @@ public class Application {
                     "https://gturnquist-quoters.cfapps.io/api/random", Quote.class);
             log.info(quote.toString());
         };
-    }
+    }*/
 
 }
